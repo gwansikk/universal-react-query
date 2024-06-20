@@ -1,5 +1,3 @@
-// v5
-
 const isReactQuery4 = false;
 const isReactQuery5 = true;
 
