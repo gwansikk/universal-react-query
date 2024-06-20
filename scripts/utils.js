@@ -17,7 +17,7 @@ export function loadModule(name) {
 
 export function switchVersion(version) {
   copy(version);
-  console.log("[@suspensive/react-query]", `set version to v${version}: @tanstack/react-query@${version}`);
+  console.log("[@suspensive/react-query]", `set version to v${version}`);
 }
 
 function copy(version) {
