@@ -1,13 +1,14 @@
-import { loadModule, switchVersion } from "./utils.mjs";
+import { loadModule, switchVersion } from './utils.mjs';
 
-const reactQueryPackageJson = loadModule("@tanstack/react-query/package.json");
+const reactQueryPackageJson = loadModule('@tanstack/react-query/package.json');
+const version = reactQueryPackageJson?.version;
 
-if (!reactQueryPackageJson || typeof reactQueryPackageJson.version !== "string") {
-  console.warn("@tanstack/react-query is not found.");
-} else if (reactQueryPackageJson.version.startsWith("4.")) {
+if (!version || typeof version !== 'string') {
+  console.warn('@tanstack/react-query is not found.');
+} else if (version.startsWith('4.')) {
   switchVersion(4);
-} else if (reactQueryPackageJson.version.startsWith("5.")) {
+} else if (version.startsWith('5.')) {
   switchVersion(5);
 } else {
-  console.warn("[@suspensive/react-query]", `version v${version} is not supported.`);
+  console.warn('[react-query-demi]', `version v${version} is not supported.`);
 }

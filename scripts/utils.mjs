@@ -1,11 +1,11 @@
-import fs from "fs";
-import path, { dirname } from "path";
-import { fileURLToPath } from "url";
+import fs from 'fs';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const dir = path.resolve(__dirname, "..", "dist");
+const dir = path.resolve(__dirname, '..', 'dist');
 
 export function loadModule(name) {
   try {
@@ -17,7 +17,7 @@ export function loadModule(name) {
 
 export function switchVersion(version) {
   copy(version);
-  console.log("[@suspensive/react-query]", `set version to v${version}`);
+  console.log('[react-query-demi]', `set version to v${version}`);
 }
 
 function copy(version) {
@@ -27,7 +27,7 @@ function copy(version) {
   files.forEach((file) => {
     const src = path.join(srcDir, file);
     const dest = path.join(dir, file);
-    let content = fs.readFileSync(src, "utf-8");
+    let content = fs.readFileSync(src, 'utf-8');
     content = content.replace(/..\/chunk-/g, `./chunk-`);
 
     try {
@@ -35,6 +35,6 @@ function copy(version) {
     } catch (error) {
       /* empty */
     }
-    fs.writeFileSync(dest, content, "utf-8");
+    fs.writeFileSync(dest, content, 'utf-8');
   });
 }

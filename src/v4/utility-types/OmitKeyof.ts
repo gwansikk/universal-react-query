@@ -8,4 +8,4 @@ export type OmitKeyof<
         | (symbol & Record<never, never>)
     : keyof TObject,
   TStrictly extends 'strictly' | 'safely' = 'strictly',
-> = Omit<TObject, TKey>
+> = Omit<TObject, TKey>;
