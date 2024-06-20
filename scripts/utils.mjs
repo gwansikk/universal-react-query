@@ -27,7 +27,8 @@ function copy(version) {
   files.forEach((file) => {
     const src = path.join(srcDir, file);
     const dest = path.join(dir, file);
-    const content = fs.readFileSync(src, "utf-8");
+    let content = fs.readFileSync(src, "utf-8");
+    content = content.replace(/..\/chunk-/g, `./chunk-`);
 
     try {
       fs.unlinkSync(dest);
