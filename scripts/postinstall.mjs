@@ -1,4 +1,4 @@
-import { loadModule, switchVersion } from "./utils.js";
+import { loadModule, switchVersion } from "./utils.mjs";
 
 const reactQueryPackageJson = loadModule("@tanstack/react-query/package.json");
 

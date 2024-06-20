@@ -1,6 +1,6 @@
 {
   "name": "react-query-demi",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Create Universal Library for @tanstack/react-query 4 and 5",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -14,12 +14,12 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "postinstall": "node -e \"import('./scripts/postinstall.js').catch(e => console.error(e))\"",
+    "postinstall": "node -e \"import('./scripts/postinstall.mjs').catch(e => console.error(e))\"",
     "build": "tsup"
   },
   "bin": {
-    "react-query-fix": "bin/react-query-fix.js",
-    "react-query-switch": "bin/react-query-switch.js"
+    "react-query-demi-fix": "bin/react-query-demi-fix.mjs",
+    "react-query-demi-switch": "bin/react-query-demi-switch.mjs"
   },
   "files": [
     "bin",
@@ -37,6 +37,5 @@
   },
   "peerDependencies": {
     "@tanstack/react-query": "^4 || ^5"
-  },
-  "type": "module"
+  }
 }
