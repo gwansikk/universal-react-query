@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import fs from "fs";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -11,9 +9,7 @@ const dir = path.resolve(__dirname, "..", "dist");
 
 export function loadModule(name) {
   try {
-    const src = path.join(__dirname, "..", "node_modules", name, "package.json");
-    console.log(src);
-    return JSON.parse(fs.readFileSync(src, "utf-8"));
+    return require(name);
   } catch (e) {
     return undefined;
   }

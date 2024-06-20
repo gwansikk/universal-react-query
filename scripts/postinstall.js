@@ -1,6 +1,6 @@
 import { loadModule, switchVersion } from "./utils.js";
 
-const reactQueryPackageJson = loadModule("@tanstack/react-query");
+const reactQueryPackageJson = loadModule("@tanstack/react-query/package.json");
 const version = reactQueryPackageJson.version;
 
 if (!version || typeof version !== "string") {
