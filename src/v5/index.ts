@@ -1,6 +1,7 @@
 // v5
-const isReactQuery4 = true;
-const isReactQuery5 = false;
+
+const isReactQuery4 = false;
+const isReactQuery5 = true;
 
 export * from "@tanstack/react-query";
 export { isReactQuery4, isReactQuery5 };
