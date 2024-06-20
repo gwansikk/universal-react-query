@@ -1,6 +1,6 @@
 {
   "name": "react-query-demi",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Create Universal Library for @tanstack/react-query 4 and 5",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
