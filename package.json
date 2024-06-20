@@ -1,0 +1,36 @@
+{
+  "name": "tanstack-query-demi",
+  "version": "0.1.1",
+  "description": "Universal Library for TanStack/React-Query",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "postinstall": "node -e \"import('./scripts/postinstall.js').catch(e => console.error(e))\""
+  },
+  "files": [
+    "dist",
+    "scripts"
+  ],
+  "keywords": [],
+  "author": "gwansikk",
+  "license": "MIT",
+  "packageManager": "pnpm@9.4.0",
+  "devDependencies": {
+    "@types/node": "^20.14.6",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^4 || ^5"
+  }
+}
