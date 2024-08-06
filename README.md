@@ -1,1 +1,3 @@
-# react-query-demi
+# universal-react-query
+
+WIP
