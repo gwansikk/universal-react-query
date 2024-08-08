@@ -10,5 +10,8 @@ if (!version || typeof version !== 'string') {
 } else if (version.startsWith('5.')) {
   switchVersion(5);
 } else {
-  console.warn('[react-query-demi]', `version v${version} is not supported.`);
+  console.warn(
+    '[universal-react-query]',
+    `version v${version} is not supported.`,
+  );
 }

@@ -1,7 +1,12 @@
 {
-  "name": "react-query-demi",
+  "name": "universal-react-query",
   "version": "0.2.8",
   "description": "Create Universal Library for @tanstack/react-query 4 and 5",
+  "keywords": [
+    "@tanstack/react-query",
+    "react-query",
+    "universal-react-query"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -13,27 +18,21 @@
     },
     "./package.json": "./package.json"
   },
-  "scripts": {
-    "postinstall": "node -e \"import('./scripts/postinstall.mjs').catch(e => console.error(e))\"",
-    "build": "tsup"
-  },
-  "bin": {
-    "react-query-demi-fix": "bin/react-query-demi-fix.mjs",
-    "react-query-demi-switch": "bin/react-query-demi-switch.mjs"
-  },
   "files": [
     "bin",
     "dist",
     "scripts"
   ],
-  "keywords": [
-    "@tanstack/react-query",
-    "react-query",
-    "react-query-demi"
-  ],
-  "author": "gwansikk",
   "license": "MIT",
-  "packageManager": "pnpm@9.4.0",
+  "author": "GwanSik Kim <Seorit98@gmail.com>",
+  "scripts": {
+    "postinstall": "node -e \"import('./scripts/postinstall.mjs').catch(e => console.error(e))\"",
+    "build": "tsup"
+  },
+  "bin": {
+    "universal-react-query-fix": "bin/universal-react-query-fix.mjs",
+    "universal-react-query-switch": "bin/universal-react-query-switch.mjs"
+  },
   "devDependencies": {
     "@types/node": "^20.14.6",
     "prettier": "^3.3.2",
@@ -42,5 +41,6 @@
   },
   "peerDependencies": {
     "@tanstack/react-query": "^4 || ^5"
-  }
+  },
+  "packageManager": "pnpm@9.4.0"
 }

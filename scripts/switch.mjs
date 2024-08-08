@@ -7,6 +7,6 @@ if (version === '4') {
 } else if (version === '5') {
   switchVersion(5);
 } else {
-  console.warn(`[react-query-demi] expecting version "4" or "5""`);
+  console.warn('[universal-react-query]', `expecting version "4" or "5"`);
   process.exit(1);
 }

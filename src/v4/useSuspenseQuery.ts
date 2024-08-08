@@ -25,10 +25,6 @@ export interface UseSuspenseQueryOptions<
     'suspense' | 'useErrorBoundary' | 'enabled' | 'placeholderData'
   > {}
 
-/**
- * This hook is wrapping useQuery of `@tanstack/react-query` v4 with default suspense option.
- * @see {@link https://suspensive.org/docs/react-query/useSuspenseQuery}
- */
 export function useSuspenseQuery<
   TQueryFnData = unknown,
   TError = unknown,

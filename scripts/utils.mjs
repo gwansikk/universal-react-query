@@ -17,7 +17,7 @@ export function loadModule(name) {
 
 export function switchVersion(version) {
   copy(version);
-  console.log('[react-query-demi]', `set version to v${version}`);
+  console.log('[universal-react-query]', `set version to v${version}`);
 }
 
 function copy(version) {
