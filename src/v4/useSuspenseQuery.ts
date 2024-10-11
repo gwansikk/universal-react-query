@@ -6,15 +6,6 @@ import {
 } from '@tanstack/react-query';
 import type { OmitKeyof } from './utility-types';
 
-export interface UseSuspenseQueryResult<TData = unknown, TError = unknown>
-  extends OmitKeyof<
-    UseQueryResult<TData, TError>,
-    keyof Pick<UseQueryResult, 'isPlaceholderData'>
-  > {
-  data: TData;
-  status: 'success';
-}
-
 export interface UseSuspenseQueryOptions<
   TQueryFnData = unknown,
   TError = unknown,
@@ -24,6 +15,15 @@ export interface UseSuspenseQueryOptions<
     UseQueryOptions<TQueryFnData, TError, TData, TQueryKey>,
     'suspense' | 'useErrorBoundary' | 'enabled' | 'placeholderData'
   > {}
+
+export interface UseSuspenseQueryResult<TData = unknown, TError = unknown>
+  extends OmitKeyof<
+    UseQueryResult<TData, TError>,
+    keyof Pick<UseQueryResult, 'isPlaceholderData'>
+  > {
+  data: TData;
+  status: 'success';
+}
 
 export function useSuspenseQuery<
   TQueryFnData = unknown,

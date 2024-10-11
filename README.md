@@ -1,4 +1,4 @@
 # universal-react-query (WIP)
 
-> [!IMPORTANT]\
+> [!CAUTION]
 > Universal React Query is currently in development. The provided API is subject to change.

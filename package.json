@@ -1,15 +1,21 @@
 {
   "name": "universal-react-query",
-  "version": "0.2.8",
-  "description": "Create Universal Library for @tanstack/react-query 4 and 5",
+  "version": "0.1.0",
+  "description": "Create Universal Library for @tanstack/react-query v4 and 5",
   "keywords": [
     "@tanstack/react-query",
     "react-query",
     "universal-react-query"
   ],
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/gwansikk/universal-react-query",
+  "bugs": "https://github.com/gwansikk/universal-react-query/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gwansikk/universal-react-query.git"
+  },
+  "license": "MIT",
+  "author": "Gwansik Kim <gwansik.kim@gwansik.dev>",
+  "sideEffects": false,
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -18,13 +24,14 @@
     },
     "./package.json": "./package.json"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "bin",
     "dist",
     "scripts"
   ],
-  "license": "MIT",
-  "author": "GwanSik Kim <Seorit98@gmail.com>",
   "scripts": {
     "postinstall": "node -e \"import('./scripts/postinstall.mjs').catch(e => console.error(e))\"",
     "build": "tsup"
@@ -41,6 +48,9 @@
   },
   "peerDependencies": {
     "@tanstack/react-query": "^4 || ^5"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "packageManager": "pnpm@9.4.0"
 }

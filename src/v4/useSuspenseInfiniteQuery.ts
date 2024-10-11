@@ -7,17 +7,6 @@ import {
 } from '@tanstack/react-query';
 import type { OmitKeyof } from './utility-types';
 
-export interface UseSuspenseInfiniteQueryResult<
-  TData = unknown,
-  TError = unknown,
-> extends OmitKeyof<
-    UseInfiniteQueryResult<TData, TError>,
-    keyof Pick<UseInfiniteQueryResult<TData, TError>, 'isPlaceholderData'>
-  > {
-  data: InfiniteData<TData>;
-  status: 'success';
-}
-
 export interface UseSuspenseInfiniteQueryOptions<
   TQueryFnData = unknown,
   TError = unknown,
@@ -33,6 +22,17 @@ export interface UseSuspenseInfiniteQueryOptions<
     >,
     'suspense' | 'useErrorBoundary' | 'enabled' | 'placeholderData'
   > {}
+
+export interface UseSuspenseInfiniteQueryResult<
+  TData = unknown,
+  TError = unknown,
+> extends OmitKeyof<
+    UseInfiniteQueryResult<TData, TError>,
+    keyof Pick<UseInfiniteQueryResult<TData, TError>, 'isPlaceholderData'>
+  > {
+  data: InfiniteData<TData>;
+  status: 'success';
+}
 
 export function useSuspenseInfiniteQuery<
   TQueryFnData = unknown,
